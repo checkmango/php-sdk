@@ -1,0 +1,59 @@
+{
+    "name": "prove/php-sdk",
+    "description": "The PHP SDK for Prove",
+    "keywords": [
+        "prove",
+        "a/b"
+    ],
+    "homepage": "https://github.com/ProveApp/php-sdk",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/ProveApp/php-sdk/issues",
+        "source": "https://github.com/ProveApp/php-sdk/issues"
+    },
+    "authors": [
+        {
+            "name": "James Brooks",
+            "email": "james@prove.dev"
+        }
+    ],
+    "require": {
+        "php": "^7.2.5 || ^8.0",
+        "ext-json": "*",
+        "php-http/cache-plugin": "^1.7.1",
+        "php-http/client-common": "^2.3",
+        "php-http/discovery": "^1.12",
+        "php-http/httplug": "^2.2",
+        "php-http/multipart-stream-builder": "^1.1.2",
+        "psr/cache": "^1.0",
+        "psr/http-client-implementation": "^1.0",
+        "psr/http-factory-implementation": "^1.0",
+        "psr/http-message": "^1.0",
+        "symfony/polyfill-php80": "^1.17"
+    },
+    "require-dev": {
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^7.2",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "phpunit/phpunit": "^9.5",
+        "php-http/mock-client": "^1.4.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Prove\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Prove\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
