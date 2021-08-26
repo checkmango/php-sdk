@@ -1,0 +1,25 @@
+{
+    "data": {
+        "id": "BASKET_AUGUST_2021",
+        "type": "experiment",
+        "attributes": {
+            "id": 1,
+            "team_id": 1,
+            "key": "BASKET_AUGUST_2021",
+            "description": "## Overview\nIn this experiment we will be testing whether we can increase the amount of products added to the basket.\n\n### What does success look like?\nIf this experiment is successful, we will see an increase in the amount of `ADD_TO_BASKET` events.\n\n### What does failure look like?\nWe will consider this experiment a failure if the number of `ADD_TO_BASKET` events decreases.\nAn average number of events will not be considered a failure. Perhaps we need to try something else.\n\n## Scope\nThis experiment will only affect the \"Add to Basket\" button designs across the site.",
+            "status": "running",
+            "created": {
+                "human": "2 weeks ago",
+                "string": "2021-08-12 09:00:02"
+            },
+            "updated": {
+                "human": "1 week ago",
+                "string": "2021-08-19 09:00:02"
+            }
+        },
+        "relationships": [],
+        "links": {
+            "self": "http:\/\/prove.test\/api\/teams\/1\/experiments\/BASKET_AUGUST_2021"
+        }
+    }
+}
