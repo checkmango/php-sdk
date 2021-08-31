@@ -8,7 +8,6 @@ use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Client\Common\Plugin\HistoryPlugin;
 use Http\Client\Common\Plugin\RedirectPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
-use Prove\Api\Hits;
 use Prove\Api\Teams;
 use Prove\HttpClient\Builder;
 use Prove\HttpClient\Message\ResponseMediator;
