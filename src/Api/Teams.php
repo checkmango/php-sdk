@@ -50,6 +50,14 @@ class Teams extends AbstractTeamsApi
     }
 
     /**
+     * @return \Prove\Api\Hits
+     */
+    public function hits(): Hits
+    {
+        return new Hits($this->getClient(), $this->teamId);
+    }
+
+    /**
      * @return \Prove\Api\Participants
      */
     public function participants(): Participants
