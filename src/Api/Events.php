@@ -85,7 +85,7 @@ class Events extends AbstractApi
     /**
      * Build the events URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildEventsUri(string ...$parts)

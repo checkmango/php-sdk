@@ -31,7 +31,7 @@ class Variants extends AbstractExperimentsApi
     }
 
     /**
-     * @param  string $variant
+     * @param  string  $variant
      * @param  array  $params
      * @return array
      */
@@ -85,7 +85,7 @@ class Variants extends AbstractExperimentsApi
     /**
      * Build the variants URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildVariantsUri(string ...$parts)

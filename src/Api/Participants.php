@@ -2,16 +2,15 @@
 
 namespace Prove\Api;
 
-use Prove\HttpClient\Util\UriBuilder;
 use Prove\Api\Participants\Experiments;
+use Prove\HttpClient\Util\UriBuilder;
 
 class Participants extends AbstractTeamsApi
 {
     /**
      * List all participants.
      *
-     * @param array $params
-     *
+     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -22,8 +21,7 @@ class Participants extends AbstractTeamsApi
     }
 
     /**
-     * @param array $params
-     *
+     * @param  array  $params
      * @return array
      */
     public function create(array $params = [])
@@ -36,9 +34,8 @@ class Participants extends AbstractTeamsApi
     /**
      * Show a participant.
      *
-     * @param string $participant
-     * @param array $params
-     *
+     * @param  string  $participant
+     * @param  array  $params
      * @return array
      */
     public function show(string $participant, array $params = [])
@@ -51,9 +48,8 @@ class Participants extends AbstractTeamsApi
     /**
      * Delete a participant.
      *
-     * @param string $participant
-     * @param array $params
-     *
+     * @param  string  $participant
+     * @param  array  $params
      * @return array
      */
     public function remove(string $participant, array $params = [])
@@ -66,9 +62,8 @@ class Participants extends AbstractTeamsApi
     /**
      * Update a participant.
      *
-     * @param string $participant
-     * @param array $params
-     *
+     * @param  string  $participant
+     * @param  array  $params
      * @return array
      */
     public function update(string $participant, array $params = [])
@@ -81,8 +76,7 @@ class Participants extends AbstractTeamsApi
     /**
      * Get the participants experiment API.
      *
-     * @param string $participant
-     *
+     * @param  string  $participant
      * @return \Prove\Api\Participants\Experiments
      */
     public function experiments(string $participant): Experiments
@@ -97,8 +91,7 @@ class Participants extends AbstractTeamsApi
     /**
      * Build the participants URI from the given parts.
      *
-     * @param string ...$parts
-     *
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildParticipantsUri(string ...$parts)

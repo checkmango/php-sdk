@@ -10,39 +10,36 @@ interface ResultPagerInterface
     /**
      * Fetch a single result from an api call.
      *
-     * @param AbstractApi $api
-     * @param string      $method
-     * @param array       $parameters
+     * @param  AbstractApi  $api
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return array
      *
      * @throws \Http\Client\Exception
-     *
-     * @return array
      */
     public function fetch(AbstractApi $api, string $method, array $parameters = []): array;
 
     /**
      * Fetch all results from an api call.
      *
-     * @param AbstractApi $api
-     * @param string      $method
-     * @param array       $parameters
+     * @param  AbstractApi  $api
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return array
      *
      * @throws \Http\Client\Exception
-     *
-     * @return array
      */
     public function fetchAll(AbstractApi $api, string $method, array $parameters = []): array;
 
     /**
      * Lazily fetch all results from an api call.
      *
-     * @param AbstractApi $api
-     * @param string      $method
-     * @param array       $parameters
+     * @param  AbstractApi  $api
+     * @param  string  $method
+     * @param  array  $parameters
+     * @return \Generator
      *
      * @throws \Http\Client\Exception
-     *
-     * @return \Generator
      */
     public function fetchAllLazy(AbstractApi $api, string $method, array $parameters = []): Generator;
 
@@ -56,9 +53,9 @@ interface ResultPagerInterface
     /**
      * Fetch the next page.
      *
-     * @throws \Http\Client\Exception
-     *
      * @return array
+     *
+     * @throws \Http\Client\Exception
      */
     public function fetchNext(): array;
 
@@ -72,27 +69,27 @@ interface ResultPagerInterface
     /**
      * Fetch the previous page.
      *
-     * @throws \Http\Client\Exception
-     *
      * @return array
+     *
+     * @throws \Http\Client\Exception
      */
     public function fetchPrevious(): array;
 
     /**
      * Fetch the first page.
      *
-     * @throws \Http\Client\Exception
-     *
      * @return array
+     *
+     * @throws \Http\Client\Exception
      */
     public function fetchFirst(): array;
 
     /**
      * Fetch the last page.
      *
-     * @throws \Http\Client\Exception
-     *
      * @return array
+     *
+     * @throws \Http\Client\Exception
      */
     public function fetchLast(): array;
 }

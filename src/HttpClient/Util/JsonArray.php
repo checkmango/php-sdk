@@ -9,11 +9,10 @@ final class JsonArray
     /**
      * Decode a JSON string into a PHP array.
      *
-     * @param string $json
+     * @param  string  $json
+     * @return array
      *
      * @throws \Prove\Exception\RuntimeException
-     *
-     * @return array
      */
     public static function decode(string $json): array
     {
@@ -34,11 +33,10 @@ final class JsonArray
     /**
      * Encode a PHP array into a JSON string.
      *
-     * @param array $value
+     * @param  array  $value
+     * @return string
      *
      * @throws \Prove\Exception\RuntimeException
-     *
-     * @return string
      */
     public static function encode(array $value): string
     {
