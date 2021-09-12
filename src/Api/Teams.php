@@ -68,7 +68,7 @@ class Teams extends AbstractTeamsApi
     /**
      * Build the teams URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildTeamsUri(string ...$parts)

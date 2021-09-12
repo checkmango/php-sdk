@@ -68,7 +68,7 @@ class Hits extends AbstractApi
     /**
      * Build the hits URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildHitsUri(string ...$parts)

@@ -129,7 +129,7 @@ class Experiments extends AbstractApi
     /**
      * Build the experiments URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildExperimentsUri(string ...$parts)

@@ -21,6 +21,17 @@ class Participants extends AbstractTeamsApi
     }
 
     /**
+     * @param  array  $params
+     * @return array
+     */
+    public function create(array $params = [])
+    {
+        $uri = $this->buildParticipantsUri();
+
+        return $this->post($uri, $params);
+    }
+
+    /**
      * Show a participant.
      *
      * @param  string  $participant
@@ -80,11 +91,15 @@ class Participants extends AbstractTeamsApi
     /**
      * Build the participants URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildParticipantsUri(string ...$parts)
     {
-        return UriBuilder::build('teams', ...$parts);
+        return UriBuilder::build(
+            'teams', $this->teamId,
+            'participants',
+            ...$parts
+        );
     }
 }

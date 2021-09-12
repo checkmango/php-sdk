@@ -31,7 +31,7 @@ class Experiments extends AbstractParticipantsApi
     }
 
     /**
-     * @param  string $experiment
+     * @param  string  $experiment
      * @param  array  $params
      * @return array
      */
@@ -59,7 +59,7 @@ class Experiments extends AbstractParticipantsApi
     /**
      * Build the experiments URI from the given parts.
      *
-     * @param string ...$parts
+     * @param  string  ...$parts
      * @return string
      */
     protected function buildExperimentsUri(string ...$parts)

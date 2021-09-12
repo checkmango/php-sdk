@@ -27,11 +27,10 @@ final class ResponseMediator
      *
      * If the there is no response body, we will always return the empty array.
      *
-     * @param \Psr\Http\Message\ResponseInterface $response
+     * @param  \Psr\Http\Message\ResponseInterface  $response
+     * @return array
      *
      * @throws \Prove\Exception\RuntimeException
-     *
-     * @return array
      */
     public static function getContent(ResponseInterface $response)
     {
@@ -55,8 +54,7 @@ final class ResponseMediator
     /**
      * Get the pagination data from the response.
      *
-     * @param \Psr\Http\Message\ResponseInterface $response
-     *
+     * @param  \Psr\Http\Message\ResponseInterface  $response
      * @return array<string,string>
      */
     public static function getPagination(ResponseInterface $response): array
@@ -70,8 +68,7 @@ final class ResponseMediator
     }
 
     /**
-     * @param string|int $key
-     *
+     * @param  string|int  $key
      * @return bool
      */
     private static function paginationFilter($key)
@@ -82,8 +79,7 @@ final class ResponseMediator
     /**
      * Get the error message from the response if present.
      *
-     * @param \Psr\Http\Message\ResponseInterface $response
-     *
+     * @param  \Psr\Http\Message\ResponseInterface  $response
      * @return string|null
      */
     public static function getErrorMessage(ResponseInterface $response): ?string
@@ -101,8 +97,7 @@ final class ResponseMediator
     /**
      * Get the error message from the error array if present.
      *
-     * @param array $error
-     *
+     * @param  array  $error
      * @return string|null
      */
     private static function getMessageFromError(array $error): ?string
@@ -130,8 +125,7 @@ final class ResponseMediator
     /**
      * Present the detail portion of the error array.
      *
-     * @param array $error
-     *
+     * @param  array  $error
      * @return string
      */
     private static function getDetailAsString(array $error): string

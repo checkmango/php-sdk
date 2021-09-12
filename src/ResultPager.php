@@ -41,9 +41,8 @@ final class ResultPager implements ResultPagerInterface
     /**
      * Create a new result pager instance.
      *
-     * @param Client   $client
-     * @param int|null $perPage
-     *
+     * @param  Client  $client
+     * @param  int|null  $perPage
      * @return void
      */
     public function __construct(Client $client, int $perPage = null)
@@ -160,11 +159,10 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @param string $key
+     * @param  string  $key
+     * @return array
      *
      * @throws \Http\Client\Exception
-     *
-     * @return array
      */
     private function get(string $key): array
     {
@@ -188,9 +186,8 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @param \Prove\Api\AbstractApi $api
-     * @param int                     $perPage
-     *
+     * @param  \Prove\Api\AbstractApi  $api
+     * @param  int  $perPage
      * @return \Prove\Api\AbstractApi
      */
     private static function bindPerPage(AbstractApi $api, int $perPage): AbstractApi
