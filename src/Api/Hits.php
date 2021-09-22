@@ -75,7 +75,7 @@ class Hits extends AbstractApi
     {
         return UriBuilder::build(
             'teams', $this->teamId,
-            'hits', ...$parts
+            'hit', ...$parts
         );
     }
 }
