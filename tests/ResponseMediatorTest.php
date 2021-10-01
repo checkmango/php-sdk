@@ -2,8 +2,8 @@
 
 namespace Prove\Tests;
 
-use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Utils;
+use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\TestCase;
 use Prove\Exception\RuntimeException;
 use Prove\HttpClient\Message\ResponseMediator;
@@ -51,7 +51,7 @@ class ResponseMediatorTest extends TestCase
         ResponseMediator::getContent($response);
     }
 
-    public function testGetErrrorMessageInvalidJson(): void
+    public function testGetErrorMessageInvalidJson(): void
     {
         $body = 'foobar';
         $response = new Response(
