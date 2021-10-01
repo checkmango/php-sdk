@@ -2,8 +2,8 @@
 
 namespace Prove\HttpClient\Message;
 
-use Prove\HttpClient\Util\JsonArray;
 use Prove\Exception\RuntimeException;
+use Prove\HttpClient\Util\JsonArray;
 use Psr\Http\Message\ResponseInterface;
 
 final class ResponseMediator
@@ -49,7 +49,7 @@ final class ResponseMediator
         }
 
         $data = JsonArray::decode($body);
-        
+
         return $data['data'] ?? $data;
     }
 

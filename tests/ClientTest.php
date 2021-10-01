@@ -2,15 +2,15 @@
 
 namespace Prove\Tests;
 
-use Prove\Client;
-use GuzzleHttp\Psr7\Utils;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Utils;
+use Http\Client\Common\HttpMethodsClientInterface;
 use PHPUnit\Framework\TestCase;
-use Prove\Exception\ServerException;
+use Prove\Client;
 use Prove\Exception\EndpointNotFoundException;
 use Prove\Exception\ResourceNotFoundException;
+use Prove\Exception\ServerException;
 use Prove\Exception\ValidationFailedException;
-use Http\Client\Common\HttpMethodsClientInterface;
 
 final class ClientTest extends TestCase
 {
@@ -42,7 +42,7 @@ final class ClientTest extends TestCase
         $this->expectException(EndpointNotFoundException::class);
         $this->expectExceptionMessage('Not Found');
         $this->expectExceptionCode(404);
-        
+
         $client = MockedClient::create(new Response(
             404,
             ['Content-Type' => 'application/json'],
@@ -57,7 +57,7 @@ final class ClientTest extends TestCase
         $this->expectException(ValidationFailedException::class);
         $this->expectExceptionMessage('The given data was invalid.');
         $this->expectExceptionCode(422);
-        
+
         $client = MockedClient::create(new Response(
             422,
             ['Content-Type' => 'application/json'],

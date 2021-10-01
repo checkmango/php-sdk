@@ -2,8 +2,8 @@
 
 namespace Prove\Tests;
 
-use GuzzleHttp\Psr7\Utils;
 use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Utils;
 use PHPUnit\Framework\TestCase;
 use Prove\Exception\RuntimeException;
 use Prove\HttpClient\Message\ResponseMediator;

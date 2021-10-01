@@ -2,19 +2,19 @@
 
 namespace Prove\HttpClient\Plugin;
 
-use Http\Promise\Promise;
 use Http\Client\Common\Plugin;
-use Prove\Exception\ClientException;
-use Prove\Exception\ServerException;
-use Prove\Exception\RuntimeException;
-use Psr\Http\Message\RequestInterface;
-use Prove\Exception\ExceptionInterface;
-use Psr\Http\Message\ResponseInterface;
+use Http\Promise\Promise;
 use Prove\Exception\ApiLimitExceededException;
+use Prove\Exception\ClientException;
 use Prove\Exception\EndpointNotFoundException;
+use Prove\Exception\ExceptionInterface;
 use Prove\Exception\ResourceNotFoundException;
+use Prove\Exception\RuntimeException;
+use Prove\Exception\ServerException;
 use Prove\Exception\ValidationFailedException;
 use Prove\HttpClient\Message\ResponseMediator;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ResponseInterface;
 
 class ExceptionThrower implements Plugin
 {
@@ -36,7 +36,7 @@ class ExceptionThrower implements Plugin
             if ($message === 'Not Found') {
                 return new EndpointNotFoundException($message, $status);
             }
-            
+
             if ($message === 'Resource Not Found') {
                 return new ResourceNotFoundException($message, $status);
             }
