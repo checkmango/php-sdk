@@ -48,7 +48,9 @@ final class ResponseMediator
             throw new RuntimeException(sprintf('The content type was not %s.', self::JSON_CONTENT_TYPE));
         }
 
-        return JsonArray::decode($body)['data'];
+        $data = JsonArray::decode($body);
+
+        return $data['data'] ?? $data;
     }
 
     /**
@@ -86,7 +88,7 @@ final class ResponseMediator
     {
         try {
             /** @var scalar|array */
-            $error = self::getContent($response)['error'] ?? null;
+            $error = self::getContent($response)['error'] ?? self::getContent($response) ?? null;
         } catch (RuntimeException $e) {
             return null;
         }
@@ -138,5 +140,10 @@ final class ResponseMediator
         }
 
         return (string) strtok(is_string($detail) ? $detail : JsonArray::encode($detail), "\n");
+    }
+
+    private static function handleError(ResponseInterface $response)
+    {
+        // throw new Exception();
     }
 }

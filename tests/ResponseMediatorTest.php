@@ -51,7 +51,7 @@ class ResponseMediatorTest extends TestCase
         ResponseMediator::getContent($response);
     }
 
-    public function testGetErrrorMessageInvalidJson(): void
+    public function testGetErrorMessageInvalidJson(): void
     {
         $body = 'foobar';
         $response = new Response(
