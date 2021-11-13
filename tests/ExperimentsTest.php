@@ -3,6 +3,8 @@
 namespace Prove\Tests;
 
 use PHPUnit\Framework\TestCase;
+use Prove\Exception\ValidationFailedException;
+use Prove\Tests\Response\ExperimentsCreateErrorResponse;
 use Prove\Tests\Response\ExperimentsListResponse;
 use Prove\Tests\Response\ExperimentsShowResponse;
 
@@ -31,5 +33,19 @@ class ExperimentsTest extends TestCase
         $this->assertIsArray($response);
         $this->assertArrayHasKey('id', $response);
         $this->assertSame('BASKET_AUGUST_2021', $response['id']);
+    }
+
+    public function testExperimentsCreateError()
+    {
+        $client = MockedClient::create(
+            ExperimentsCreateErrorResponse::create()
+        );
+
+        $this->expectException(ValidationFailedException::class);
+
+        $response = $client->teams(1)->experiments()->create('NEW_EXPERIMENT');
+
+        $this->assertIsArray($response);
+        $this->assertIsArray($response['errors']);
     }
 }

@@ -30,7 +30,7 @@ class ExceptionThrower implements Plugin
         });
     }
 
-    private static function createException(int $status, string $message): ExceptionInterface
+    private static function createException(int $status, string $message, array $errors = []): ExceptionInterface
     {
         if (404 === $status) {
             if ($message === 'Not Found') {
@@ -43,7 +43,7 @@ class ExceptionThrower implements Plugin
         }
 
         if (400 === $status || 422 === $status) {
-            return new ValidationFailedException($message, $status);
+            return (new ValidationFailedException($message, $status))->withErrors($errors);
         }
 
         if (429 === $status) {

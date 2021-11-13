@@ -1,0 +1,11 @@
+{
+  "message": "The given data was invalid.",
+  "errors": {
+    "algorithm_type": [
+      "The algorithm type field is required."
+    ],
+    "event_key": [
+      "The event key field is required."
+    ]
+  }
+}
