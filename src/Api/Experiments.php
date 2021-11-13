@@ -56,6 +56,20 @@ class Experiments extends AbstractApi
     }
 
     /**
+     * Create an experiment.
+     *
+     * @param  string  $experiment
+     * @param  array  $params
+     * @return array
+     */
+    public function create(string $experiment, array $params = [])
+    {
+        $uri = $this->buildExperimentsUri($experiment);
+
+        return $this->post($uri, $params);
+    }
+
+    /**
      * Delete an experiment.
      *
      * @param  string  $experiment

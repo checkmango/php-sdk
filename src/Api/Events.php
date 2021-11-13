@@ -55,6 +55,20 @@ class Events extends AbstractApi
     }
 
     /**
+     * Create an event.
+     *
+     * @param  string  $event
+     * @param  array  $params
+     * @return array
+     */
+    public function create(string $event, array $params = [])
+    {
+        $uri = $this->buildEventsUri($event);
+
+        return $this->post($uri, $params);
+    }
+
+    /**
      * Delete an event.
      *
      * @param  string  $event
