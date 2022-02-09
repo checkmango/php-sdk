@@ -1,8 +1,8 @@
 <?php
 
-namespace Prove\Api\Experiments;
+namespace Checkmango\Api\Experiments;
 
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Variants extends AbstractExperimentsApi
 {

@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\Exception;
+namespace Checkmango\Exception;
 
 class ApiLimitExceededException extends RuntimeException
 {

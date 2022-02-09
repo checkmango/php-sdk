@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\Tests\Response;
+namespace Checkmango\Tests\Response;
 
 use GuzzleHttp\Psr7\Response;
-use Prove\Tests\Resource;
+use Checkmango\Tests\Resource;
 
 class ExperimentsCreateErrorResponse
 {

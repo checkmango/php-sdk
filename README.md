@@ -1,4 +1,4 @@
-# Prove PHP SDK
+# Checkmango PHP SDK
 
 This project is heavily inspired by [Graham Campbell's](https://github.com/GrahamCampbell) packages; [Bitbucket](https://github.com/BitbucketPHP/Client) and [GitLab](https://github.com/GitLabPHP/Client). 
 
@@ -9,20 +9,20 @@ This version supports PHP 7.2-8.0. To get started, require the project using [Co
 ### Standard Installation
 
 ```shell
-composer require "prove/php-sdk:dev-master" "guzzlehttp/guzzle:^7.2" "http-interop/http-factory-guzzle:^1.0"
+composer require "checkmango/php-sdk:dev-master" "guzzlehttp/guzzle:^7.2" "http-interop/http-factory-guzzle:^1.0"
 ```
 
 ### Laravel Installation
 
 ```shell
-composer require "prove/laravel:dev-master" "guzzlehttp/guzzle:^7.2" "http-interop/http-factory-guzzle:^1.0"
+composer require "checkmango/laravel:dev-master" "guzzlehttp/guzzle:^7.2" "http-interop/http-factory-guzzle:^1.0"
 ```
 
 ## Usage
 
 ```php
 // Authentication
-$client = new Prove\Client();
+$client = new Checkmango\Client();
 $client->authenticate('your_api_token');
 
 // Example API Call
@@ -34,14 +34,14 @@ $experiment = $client->teams($teamId)->experiments()->show('MY_EXPERIMENT_KEY');
 The `Pager` class allows you to easily retrieve all results across multiple pages of results.
 
 ```php
-$pager = new Prove\ResultPager($client);
+$pager = new Checkmango\ResultPager($client);
 $experiments = $pager->fetchAll($client->teams($teamId)->experiments(), 'all');
 ```
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an email to James Brooks at james@prove.dev. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/ProveApp/php-sdk/security/policy).
+If you discover a security vulnerability within this package, please send an email to James Brooks at james@checkmango.com. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/checkmango/php-sdk/security/policy).
 
 ## License
 
-Prove PHP SDK is licensed under [The MIT License (MIT)](LICENSE).
+Checkmango PHP SDK is licensed under [The MIT License (MIT)](LICENSE).

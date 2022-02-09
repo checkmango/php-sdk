@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\HttpClient\Message;
+namespace Checkmango\HttpClient\Message;
 
-use Prove\Exception\RuntimeException;
-use Prove\HttpClient\Util\JsonArray;
+use Checkmango\Exception\RuntimeException;
+use Checkmango\HttpClient\Util\JsonArray;
 use Psr\Http\Message\ResponseInterface;
 
 final class ResponseMediator
@@ -30,7 +30,7 @@ final class ResponseMediator
      * @param  \Psr\Http\Message\ResponseInterface  $response
      * @return array
      *
-     * @throws \Prove\Exception\RuntimeException
+     * @throws \Checkmango\Exception\RuntimeException
      */
     public static function getContent(ResponseInterface $response)
     {

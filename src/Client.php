@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove;
+namespace Checkmango;
 
 use Http\Client\Common\HttpMethodsClientInterface;
 use Http\Client\Common\Plugin\AddHostPlugin;
@@ -8,12 +8,12 @@ use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
 use Http\Client\Common\Plugin\HistoryPlugin;
 use Http\Client\Common\Plugin\RedirectPlugin;
 use Http\Discovery\Psr17FactoryDiscovery;
-use Prove\Api\Teams;
-use Prove\HttpClient\Builder;
-use Prove\HttpClient\Message\ResponseMediator;
-use Prove\HttpClient\Plugin\Authentication;
-use Prove\HttpClient\Plugin\ExceptionThrower;
-use Prove\HttpClient\Plugin\History;
+use Checkmango\Api\Teams;
+use Checkmango\HttpClient\Builder;
+use Checkmango\HttpClient\Message\ResponseMediator;
+use Checkmango\HttpClient\Plugin\Authentication;
+use Checkmango\HttpClient\Plugin\ExceptionThrower;
+use Checkmango\HttpClient\Plugin\History;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 
@@ -24,33 +24,33 @@ class Client
      *
      * @var string
      */
-    private const BASE_URL = 'https://prove.dev';
+    private const BASE_URL = 'https://checkmango.com';
 
     /**
      * The default user agent header.
      *
      * @var string
      */
-    private const USER_AGENT = 'prove-php-api-client/1.0';
+    private const USER_AGENT = 'checkmango-php-api-client/1.0';
 
     /**
      * The HTTP client builder.
      *
-     * @var \Prove\HttpClient\Builder
+     * @var \Checkmango\HttpClient\Builder
      */
     private $httpClientBuilder;
 
     /**
      * The response history plugin.
      *
-     * @var \Prove\HttpClient\Plugin\History
+     * @var \Checkmango\HttpClient\Plugin\History
      */
     private $responseHistory;
 
     /**
-     * Create a new Prove API client instance.
+     * Create a new Checkmango API client instance.
      *
-     * @param  \Prove\HttpClient\Builder|null  $httpClientBuilder
+     * @param  \Checkmango\HttpClient\Builder|null  $httpClientBuilder
      * @param  string|null  $baseUrl
      */
     public function __construct(Builder $httpClientBuilder = null, string $baseUrl = null)
@@ -71,7 +71,7 @@ class Client
     }
 
     /**
-     * Create a Prove Client instance.
+     * Create a Checkmango Client instance.
      *
      * @param  \Psr\Http\Client\ClientInterface  $httpClient
      * @return static
@@ -85,7 +85,7 @@ class Client
 
     /**
      * @param  int|null  $teamId
-     * @return \Prove\Api\Teams
+     * @return \Checkmango\Api\Teams
      */
     public function teams(int $teamId = null): Teams
     {
@@ -129,7 +129,7 @@ class Client
     /**
      * Get the HTTP client builder.
      *
-     * @return \Prove\HttpClient\Builder
+     * @return \Checkmango\HttpClient\Builder
      */
     protected function getHttpClientBuilder(): Builder
     {

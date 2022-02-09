@@ -1,12 +1,12 @@
 <?php
 
-namespace Prove;
+namespace Checkmango;
 
 use Closure;
 use Generator;
-use Prove\Api\AbstractApi;
-use Prove\Exception\RuntimeException;
-use Prove\HttpClient\Message\ResponseMediator;
+use Checkmango\Api\AbstractApi;
+use Checkmango\Exception\RuntimeException;
+use Checkmango\HttpClient\Message\ResponseMediator;
 use ValueError;
 
 final class ResultPager implements ResultPagerInterface
@@ -21,7 +21,7 @@ final class ResultPager implements ResultPagerInterface
     /**
      * The client to use for pagination.
      *
-     * @var \Prove\Client
+     * @var \Checkmango\Client
      */
 
     /**
@@ -186,9 +186,9 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @param  \Prove\Api\AbstractApi  $api
+     * @param  \Checkmango\Api\AbstractApi  $api
      * @param  int  $perPage
-     * @return \Prove\Api\AbstractApi
+     * @return \Checkmango\Api\AbstractApi
      */
     private static function bindPerPage(AbstractApi $api, int $perPage): AbstractApi
     {

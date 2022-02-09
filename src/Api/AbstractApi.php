@@ -1,11 +1,11 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Client;
-use Prove\HttpClient\Message\ResponseMediator;
-use Prove\HttpClient\Util\JsonArray;
-use Prove\HttpClient\Util\QueryStringBuilder;
+use Checkmango\Client;
+use Checkmango\HttpClient\Message\ResponseMediator;
+use Checkmango\HttpClient\Util\JsonArray;
+use Checkmango\HttpClient\Util\QueryStringBuilder;
 use Psr\Http\Message\ResponseInterface;
 
 abstract class AbstractApi
@@ -13,7 +13,7 @@ abstract class AbstractApi
     private const URI_PREFIX = '/api/';
 
     /**
-     * @var \Prove\Client
+     * @var \Checkmango\Client
      */
     private $client;
 

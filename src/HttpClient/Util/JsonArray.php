@@ -1,8 +1,8 @@
 <?php
 
-namespace Prove\HttpClient\Util;
+namespace Checkmango\HttpClient\Util;
 
-use Prove\Exception\RuntimeException;
+use Checkmango\Exception\RuntimeException;
 
 final class JsonArray
 {
@@ -12,7 +12,7 @@ final class JsonArray
      * @param  string  $json
      * @return array
      *
-     * @throws \Prove\Exception\RuntimeException
+     * @throws \Checkmango\Exception\RuntimeException
      */
     public static function decode(string $json): array
     {
@@ -36,7 +36,7 @@ final class JsonArray
      * @param  array  $value
      * @return string
      *
-     * @throws \Prove\Exception\RuntimeException
+     * @throws \Checkmango\Exception\RuntimeException
      */
     public static function encode(array $value): string
     {

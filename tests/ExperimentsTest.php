@@ -1,12 +1,12 @@
 <?php
 
-namespace Prove\Tests;
+namespace Checkmango\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Prove\Exception\ValidationFailedException;
-use Prove\Tests\Response\ExperimentsCreateErrorResponse;
-use Prove\Tests\Response\ExperimentsListResponse;
-use Prove\Tests\Response\ExperimentsShowResponse;
+use Checkmango\Exception\ValidationFailedException;
+use Checkmango\Tests\Response\ExperimentsCreateErrorResponse;
+use Checkmango\Tests\Response\ExperimentsListResponse;
+use Checkmango\Tests\Response\ExperimentsShowResponse;
 
 class ExperimentsTest extends TestCase
 {

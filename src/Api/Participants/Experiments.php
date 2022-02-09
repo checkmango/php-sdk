@@ -1,8 +1,8 @@
 <?php
 
-namespace Prove\Api\Participants;
+namespace Checkmango\Api\Participants;
 
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Experiments extends AbstractParticipantsApi
 {

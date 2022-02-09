@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Client;
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\Client;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Hits extends AbstractApi
 {
@@ -17,7 +17,7 @@ class Hits extends AbstractApi
     /**
      * Create a new experiments API instance.
      *
-     * @param  \Prove\Client  $client
+     * @param  \Checkmango\Client  $client
      * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
@@ -49,11 +49,11 @@ class Hits extends AbstractApi
      *
      * @param  string  $experiment
      * @param  string  $participant
-     * @param  string  $event
+     * @param  string|null  $event
      * @param  array  $attributes
      * @return array
      */
-    public function conversion(string $experiment, string $participant, string $event, array $attributes = [])
+    public function conversion(string $experiment, string $participant, ?string $event = null, array $attributes = [])
     {
         $uri = $this->buildHitsUri();
 

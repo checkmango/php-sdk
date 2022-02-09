@@ -9,6 +9,6 @@ are multiple supported versions at any given time.
 ## Reporting a Vulnerability
 
 If you discover a security vulnerability within this package, please send an
-email to James Brooks at james@prove.dev. All security vulnerabilities
+email to James Brooks at james@checkmango.com. All security vulnerabilities
 will be promptly addressed. Please do not disclose security-related issues
 publicly until a fix has been announced.

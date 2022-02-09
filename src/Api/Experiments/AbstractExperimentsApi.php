@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\Api\Experiments;
+namespace Checkmango\Api\Experiments;
 
-use Prove\Api\AbstractApi;
-use Prove\Client;
+use Checkmango\Api\AbstractApi;
+use Checkmango\Client;
 
 abstract class AbstractExperimentsApi extends AbstractApi
 {
@@ -24,7 +24,7 @@ abstract class AbstractExperimentsApi extends AbstractApi
     /**
      * Create a new API instance.
      *
-     * @param  \Prove\Client  $client
+     * @param  \Checkmango\Client  $client
      * @param  int  $teamId
      * @param  string  $experiment
      */

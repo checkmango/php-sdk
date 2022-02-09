@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\HttpClient\Util;
+namespace Checkmango\HttpClient\Util;
 
 use ValueError;
 

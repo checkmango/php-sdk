@@ -1,20 +1,20 @@
 {
-    "name": "prove/php-sdk",
-    "description": "The PHP SDK for Prove",
+    "name": "checkmango/php-sdk",
+    "description": "The PHP SDK for Checkmango",
     "keywords": [
-        "prove",
+        "checkmango",
         "a/b"
     ],
-    "homepage": "https://github.com/ProveApp/php-sdk",
+    "homepage": "https://github.com/checkmango/php-sdk",
     "license": "MIT",
     "support": {
-        "issues": "https://github.com/ProveApp/php-sdk/issues",
-        "source": "https://github.com/ProveApp/php-sdk/issues"
+        "issues": "https://github.com/checkmango/php-sdk/issues",
+        "source": "https://github.com/checkmango/php-sdk/issues"
     },
     "authors": [
         {
             "name": "James Brooks",
-            "email": "james@prove.dev"
+            "email": "james@checkmango.com"
         }
     ],
     "require": {
@@ -40,12 +40,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Prove\\": "src/"
+            "Checkmango\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Prove\\Tests\\": "tests/"
+            "Checkmango\\Tests\\": "tests/"
         }
     },
     "scripts": {

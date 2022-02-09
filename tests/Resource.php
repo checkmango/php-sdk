@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\Tests;
+namespace Checkmango\Tests;
 
 use RuntimeException;
 

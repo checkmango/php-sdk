@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\HttpClient;
+namespace Checkmango\HttpClient;
 
 use Http\Client\Common\HttpMethodsClient;
 use Http\Client\Common\HttpMethodsClientInterface;

@@ -1,8 +1,8 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Teams extends AbstractTeamsApi
 {
@@ -34,7 +34,7 @@ class Teams extends AbstractTeamsApi
     }
 
     /**
-     * @return \Prove\Api\Experiments
+     * @return \Checkmango\Api\Experiments
      */
     public function experiments(): Experiments
     {
@@ -42,7 +42,7 @@ class Teams extends AbstractTeamsApi
     }
 
     /**
-     * @return \Prove\Api\Events
+     * @return \Checkmango\Api\Events
      */
     public function events(): Events
     {
@@ -50,7 +50,7 @@ class Teams extends AbstractTeamsApi
     }
 
     /**
-     * @return \Prove\Api\Hits
+     * @return \Checkmango\Api\Hits
      */
     public function hits(): Hits
     {
@@ -58,7 +58,7 @@ class Teams extends AbstractTeamsApi
     }
 
     /**
-     * @return \Prove\Api\Participants
+     * @return \Checkmango\Api\Participants
      */
     public function participants(): Participants
     {

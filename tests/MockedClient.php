@@ -1,10 +1,10 @@
 <?php
 
-namespace Prove\Tests;
+namespace Checkmango\Tests;
 
 use Http\Mock\Client as MockClient;
-use Prove\Client;
-use Prove\HttpClient\Builder;
+use Checkmango\Client;
+use Checkmango\HttpClient\Builder;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 

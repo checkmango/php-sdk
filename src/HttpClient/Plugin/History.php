@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\HttpClient\Plugin;
+namespace Checkmango\HttpClient\Plugin;
 
 use Http\Client\Common\Plugin\Journal;
 use Psr\Http\Client\ClientExceptionInterface;

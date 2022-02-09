@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\Exception;
+namespace Checkmango\Exception;
 
 use Http\Client\Exception;
 

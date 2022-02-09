@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Api\Participants\Experiments;
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\Api\Participants\Experiments;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Participants extends AbstractTeamsApi
 {
@@ -77,7 +77,7 @@ class Participants extends AbstractTeamsApi
      * Get the participants experiment API.
      *
      * @param  string  $participant
-     * @return \Prove\Api\Participants\Experiments
+     * @return \Checkmango\Api\Participants\Experiments
      */
     public function experiments(string $participant): Experiments
     {

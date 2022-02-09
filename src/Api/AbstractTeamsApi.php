@@ -1,8 +1,8 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Client;
+use Checkmango\Client;
 
 abstract class AbstractTeamsApi extends AbstractApi
 {
@@ -16,7 +16,7 @@ abstract class AbstractTeamsApi extends AbstractApi
     /**
      * Create a new abstract teams api instance.
      *
-     * @param  \Prove\Client  $client
+     * @param  \Checkmango\Client  $client
      * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)

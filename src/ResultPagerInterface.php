@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove;
+namespace Checkmango;
 
 use Generator;
-use Prove\Api\AbstractApi;
+use Checkmango\Api\AbstractApi;
 
 interface ResultPagerInterface
 {

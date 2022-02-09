@@ -1,6 +1,6 @@
 <?php
 
-namespace Prove\Exception;
+namespace Checkmango\Exception;
 
 class ErrorException extends \ErrorException implements ExceptionInterface
 {

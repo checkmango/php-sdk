@@ -1,10 +1,10 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Api\Experiments\Variants;
-use Prove\Client;
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\Api\Experiments\Variants;
+use Checkmango\Client;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Experiments extends AbstractApi
 {
@@ -18,7 +18,7 @@ class Experiments extends AbstractApi
     /**
      * Create a new experiments API instance.
      *
-     * @param  \Prove\Client  $client
+     * @param  \Checkmango\Client  $client
      * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
@@ -129,7 +129,7 @@ class Experiments extends AbstractApi
      * Get the variants API.
      *
      * @param  string  $experiment
-     * @return \Prove\Api\Experiments\Variants
+     * @return \Checkmango\Api\Experiments\Variants
      */
     public function variants(string $experiment): Variants
     {

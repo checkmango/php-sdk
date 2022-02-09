@@ -16,7 +16,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="Prove Test Suite">
+        <testsuite name="Checkmango Test Suite">
             <directory suffix="Test.php">./tests</directory>
         </testsuite>
     </testsuites>

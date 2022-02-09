@@ -1,18 +1,18 @@
 <?php
 
-namespace Prove\HttpClient\Plugin;
+namespace Checkmango\HttpClient\Plugin;
 
 use Http\Client\Common\Plugin;
 use Http\Promise\Promise;
-use Prove\Exception\ApiLimitExceededException;
-use Prove\Exception\ClientException;
-use Prove\Exception\EndpointNotFoundException;
-use Prove\Exception\ExceptionInterface;
-use Prove\Exception\ResourceNotFoundException;
-use Prove\Exception\RuntimeException;
-use Prove\Exception\ServerException;
-use Prove\Exception\ValidationFailedException;
-use Prove\HttpClient\Message\ResponseMediator;
+use Checkmango\Exception\ApiLimitExceededException;
+use Checkmango\Exception\ClientException;
+use Checkmango\Exception\EndpointNotFoundException;
+use Checkmango\Exception\ExceptionInterface;
+use Checkmango\Exception\ResourceNotFoundException;
+use Checkmango\Exception\RuntimeException;
+use Checkmango\Exception\ServerException;
+use Checkmango\Exception\ValidationFailedException;
+use Checkmango\HttpClient\Message\ResponseMediator;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

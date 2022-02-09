@@ -1,16 +1,16 @@
 <?php
 
-namespace Prove\Tests;
+namespace Checkmango\Tests;
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Utils;
 use Http\Client\Common\HttpMethodsClientInterface;
 use PHPUnit\Framework\TestCase;
-use Prove\Client;
-use Prove\Exception\EndpointNotFoundException;
-use Prove\Exception\ResourceNotFoundException;
-use Prove\Exception\ServerException;
-use Prove\Exception\ValidationFailedException;
+use Checkmango\Client;
+use Checkmango\Exception\EndpointNotFoundException;
+use Checkmango\Exception\ResourceNotFoundException;
+use Checkmango\Exception\ServerException;
+use Checkmango\Exception\ValidationFailedException;
 
 final class ClientTest extends TestCase
 {

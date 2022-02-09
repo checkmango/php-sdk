@@ -1,12 +1,12 @@
 <?php
 
-namespace Prove\Tests;
+namespace Checkmango\Tests;
 
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Utils;
 use PHPUnit\Framework\TestCase;
-use Prove\Exception\RuntimeException;
-use Prove\HttpClient\Message\ResponseMediator;
+use Checkmango\Exception\RuntimeException;
+use Checkmango\HttpClient\Message\ResponseMediator;
 
 class ResponseMediatorTest extends TestCase
 {

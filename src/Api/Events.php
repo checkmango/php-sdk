@@ -1,9 +1,9 @@
 <?php
 
-namespace Prove\Api;
+namespace Checkmango\Api;
 
-use Prove\Client;
-use Prove\HttpClient\Util\UriBuilder;
+use Checkmango\Client;
+use Checkmango\HttpClient\Util\UriBuilder;
 
 class Events extends AbstractApi
 {
@@ -17,7 +17,7 @@ class Events extends AbstractApi
     /**
      * Create a new events API instance.
      *
-     * @param  \Prove\Client  $client
+     * @param  \Checkmango\Client  $client
      * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
