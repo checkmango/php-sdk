@@ -2,11 +2,11 @@
 
 namespace Checkmango\Tests;
 
+use Checkmango\Exception\RuntimeException;
+use Checkmango\HttpClient\Message\ResponseMediator;
 use GuzzleHttp\Psr7\Response;
 use GuzzleHttp\Psr7\Utils;
 use PHPUnit\Framework\TestCase;
-use Checkmango\Exception\RuntimeException;
-use Checkmango\HttpClient\Message\ResponseMediator;
 
 class ResponseMediatorTest extends TestCase
 {

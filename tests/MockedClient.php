@@ -2,9 +2,9 @@
 
 namespace Checkmango\Tests;
 
-use Http\Mock\Client as MockClient;
 use Checkmango\Client;
 use Checkmango\HttpClient\Builder;
+use Http\Mock\Client as MockClient;
 use Psr\Http\Message\ResponseFactoryInterface;
 use Psr\Http\Message\ResponseInterface;
 

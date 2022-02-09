@@ -2,15 +2,15 @@
 
 namespace Checkmango\Tests;
 
-use GuzzleHttp\Psr7\Response;
-use GuzzleHttp\Psr7\Utils;
-use Http\Client\Common\HttpMethodsClientInterface;
-use PHPUnit\Framework\TestCase;
 use Checkmango\Client;
 use Checkmango\Exception\EndpointNotFoundException;
 use Checkmango\Exception\ResourceNotFoundException;
 use Checkmango\Exception\ServerException;
 use Checkmango\Exception\ValidationFailedException;
+use GuzzleHttp\Psr7\Response;
+use GuzzleHttp\Psr7\Utils;
+use Http\Client\Common\HttpMethodsClientInterface;
+use PHPUnit\Framework\TestCase;
 
 final class ClientTest extends TestCase
 {

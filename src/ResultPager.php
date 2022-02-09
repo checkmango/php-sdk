@@ -2,11 +2,11 @@
 
 namespace Checkmango;
 
-use Closure;
-use Generator;
 use Checkmango\Api\AbstractApi;
 use Checkmango\Exception\RuntimeException;
 use Checkmango\HttpClient\Message\ResponseMediator;
+use Closure;
+use Generator;
 use ValueError;
 
 final class ResultPager implements ResultPagerInterface

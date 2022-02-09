@@ -2,8 +2,6 @@
 
 namespace Checkmango\HttpClient\Plugin;
 
-use Http\Client\Common\Plugin;
-use Http\Promise\Promise;
 use Checkmango\Exception\ApiLimitExceededException;
 use Checkmango\Exception\ClientException;
 use Checkmango\Exception\EndpointNotFoundException;
@@ -13,6 +11,8 @@ use Checkmango\Exception\RuntimeException;
 use Checkmango\Exception\ServerException;
 use Checkmango\Exception\ValidationFailedException;
 use Checkmango\HttpClient\Message\ResponseMediator;
+use Http\Client\Common\Plugin;
+use Http\Promise\Promise;
 use Psr\Http\Message\RequestInterface;
 use Psr\Http\Message\ResponseInterface;
 

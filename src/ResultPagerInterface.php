@@ -2,8 +2,8 @@
 
 namespace Checkmango;
 
-use Generator;
 use Checkmango\Api\AbstractApi;
+use Generator;
 
 interface ResultPagerInterface
 {

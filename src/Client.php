@@ -2,18 +2,18 @@
 
 namespace Checkmango;
 
-use Http\Client\Common\HttpMethodsClientInterface;
-use Http\Client\Common\Plugin\AddHostPlugin;
-use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
-use Http\Client\Common\Plugin\HistoryPlugin;
-use Http\Client\Common\Plugin\RedirectPlugin;
-use Http\Discovery\Psr17FactoryDiscovery;
 use Checkmango\Api\Teams;
 use Checkmango\HttpClient\Builder;
 use Checkmango\HttpClient\Message\ResponseMediator;
 use Checkmango\HttpClient\Plugin\Authentication;
 use Checkmango\HttpClient\Plugin\ExceptionThrower;
 use Checkmango\HttpClient\Plugin\History;
+use Http\Client\Common\HttpMethodsClientInterface;
+use Http\Client\Common\Plugin\AddHostPlugin;
+use Http\Client\Common\Plugin\HeaderDefaultsPlugin;
+use Http\Client\Common\Plugin\HistoryPlugin;
+use Http\Client\Common\Plugin\RedirectPlugin;
+use Http\Discovery\Psr17FactoryDiscovery;
 use Psr\Http\Client\ClientInterface;
 use Psr\Http\Message\ResponseInterface;
 

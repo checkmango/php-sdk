@@ -2,8 +2,8 @@
 
 namespace Checkmango\Tests\Response;
 
-use GuzzleHttp\Psr7\Response;
 use Checkmango\Tests\Resource;
+use GuzzleHttp\Psr7\Response;
 
 class ExperimentsCreateErrorResponse
 {

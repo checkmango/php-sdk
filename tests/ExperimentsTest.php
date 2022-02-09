@@ -2,11 +2,11 @@
 
 namespace Checkmango\Tests;
 
-use PHPUnit\Framework\TestCase;
 use Checkmango\Exception\ValidationFailedException;
 use Checkmango\Tests\Response\ExperimentsCreateErrorResponse;
 use Checkmango\Tests\Response\ExperimentsListResponse;
 use Checkmango\Tests\Response\ExperimentsShowResponse;
+use PHPUnit\Framework\TestCase;
 
 class ExperimentsTest extends TestCase
 {
