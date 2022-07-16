@@ -3,7 +3,8 @@
     "description": "The PHP SDK for Checkmango",
     "keywords": [
         "checkmango",
-        "a/b"
+        "multivariate",
+        "ab"
     ],
     "homepage": "https://github.com/checkmango/php-sdk",
     "license": "MIT",
