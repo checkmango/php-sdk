@@ -11,6 +11,6 @@ class ExperimentsListResponse
     {
         $body = Resource::get('experiments-list-success.json');
 
-        return new Response(200, ['Content-Type' => 'application/json'], $body);
+        return new Response(200, ['Content-Type' => 'application/vnd.api+json'], $body);
     }
 }

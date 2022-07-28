@@ -14,7 +14,7 @@ class ResponseMediatorTest extends TestCase
     {
         $response = new Response(
             200,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor('{"data": {"foo": "bar"}}')
         );
 
@@ -31,7 +31,7 @@ class ResponseMediatorTest extends TestCase
         );
 
         $this->expectException(RuntimeException::class);
-        $this->expectExceptionMessage('The content type was not application/json.');
+        $this->expectExceptionMessage('The content type was not application/vnd.api+json.');
 
         ResponseMediator::getContent($response);
     }
@@ -41,7 +41,7 @@ class ResponseMediatorTest extends TestCase
         $body = 'foobar';
         $response = new Response(
             200,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor($body)
         );
 
@@ -56,7 +56,7 @@ class ResponseMediatorTest extends TestCase
         $body = 'foobar';
         $response = new Response(
             200,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor($body)
         );
 

@@ -11,6 +11,6 @@ class ExperimentsCreateErrorResponse
     {
         $body = Resource::get('experiments-create-error.json');
 
-        return new Response(422, ['Content-Type' => 'application/json'], $body);
+        return new Response(422, ['Content-Type' => 'application/vnd.api+json'], $body);
     }
 }

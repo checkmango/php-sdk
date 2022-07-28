@@ -30,7 +30,7 @@ final class ClientTest extends TestCase
 
         $client = MockedClient::create(new Response(
             404,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor('{"message": "Resource Not Found"}')
         ));
 
@@ -45,7 +45,7 @@ final class ClientTest extends TestCase
 
         $client = MockedClient::create(new Response(
             404,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor('{"message": "Not Found"}')
         ));
 
@@ -60,7 +60,7 @@ final class ClientTest extends TestCase
 
         $client = MockedClient::create(new Response(
             422,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor('{"message": "The given data was invalid.","errors": {"key": ["The key field is required."]}}')
         ));
 
@@ -74,7 +74,7 @@ final class ClientTest extends TestCase
 
         $client = MockedClient::create(new Response(
             500,
-            ['Content-Type' => 'application/json'],
+            ['Content-Type' => 'application/vnd.api+json'],
             Utils::streamFor('Server Error')
         ));
 
