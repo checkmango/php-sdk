@@ -62,7 +62,7 @@ final class ResultPager implements ResultPagerInterface
      */
     public function fetch(AbstractApi $api, string $method, array $parameters = []): array
     {
-        $result = self::bindPerPage($api, $this->perPage)->$method(...$parameters);
+        $result = self::bindPerPage($api, $this->perPage)->$method($parameters);
 
         if (! \is_array($result)) {
             throw new RuntimeException('Pagination of this endpoint is not supported.');
