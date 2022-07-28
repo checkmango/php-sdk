@@ -20,7 +20,7 @@ final class ResponseMediator
      *
      * @var string
      */
-    public const JSON_CONTENT_TYPE = 'application/json';
+    public const JSON_CONTENT_TYPE = 'application/vnd.api+json';
 
     /**
      * Get the decoded response content.
@@ -32,7 +32,7 @@ final class ResponseMediator
      *
      * @throws \Checkmango\Exception\RuntimeException
      */
-    public static function getContent(ResponseInterface $response)
+    public static function getContent(ResponseInterface $response, $key = 'data')
     {
         if (204 === $response->getStatusCode()) {
             return [];
@@ -50,7 +50,7 @@ final class ResponseMediator
 
         $data = JsonArray::decode($body);
 
-        return $data['data'] ?? $data;
+        return $data[$key] ?? $data;
     }
 
     /**
@@ -63,7 +63,7 @@ final class ResponseMediator
     {
         try {
             /** @var array<string,string> */
-            return array_filter(self::getContent($response), [self::class, 'paginationFilter'], ARRAY_FILTER_USE_KEY);
+            return array_filter(self::getContent($response, 'meta'), [self::class, 'paginationFilter'], ARRAY_FILTER_USE_KEY);
         } catch (RuntimeException $e) {
             return [];
         }
@@ -75,7 +75,7 @@ final class ResponseMediator
      */
     private static function paginationFilter($key)
     {
-        return in_array($key, ['size', 'page', 'pagelen', 'next', 'previous'], true);
+        return in_array($key, ['current_page', 'from', 'per_page', 'to', 'path'], true);
     }
 
     /**
