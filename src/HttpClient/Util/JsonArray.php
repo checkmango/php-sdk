@@ -16,7 +16,7 @@ final class JsonArray
      */
     public static function decode(string $json): array
     {
-        /** @var scalar|array|null */
+        /** @var scalar|array|null $data */
         $data = json_decode($json, true);
 
         if (JSON_ERROR_NONE !== json_last_error()) {

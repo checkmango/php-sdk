@@ -104,7 +104,7 @@ final class ResultPager implements ResultPagerInterface
      */
     public function hasNext(): bool
     {
-        return (int) $this->pagination['current_page'] < $this->pagination['to'];
+        return $this->pagination['next'] !== null;
     }
 
     /**
@@ -120,7 +120,7 @@ final class ResultPager implements ResultPagerInterface
      */
     public function hasPrevious(): bool
     {
-        return $this->pagination['current_page'] > 0;
+        return $this->pagination['prev'] !== null;
     }
 
     /**

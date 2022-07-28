@@ -63,7 +63,7 @@ final class ResponseMediator
     {
         try {
             /** @var array<string,string> */
-            return array_filter(self::getContent($response, 'meta'), [self::class, 'paginationFilter'], ARRAY_FILTER_USE_KEY);
+            return array_filter(self::getContent($response, 'links'), [self::class, 'paginationFilter'], ARRAY_FILTER_USE_KEY);
         } catch (RuntimeException $e) {
             return [];
         }
@@ -75,7 +75,7 @@ final class ResponseMediator
      */
     private static function paginationFilter($key)
     {
-        return in_array($key, ['current_page', 'from', 'per_page', 'to', 'path'], true);
+        return in_array($key, ['first', 'last', 'prev', 'next'], true);
     }
 
     /**
