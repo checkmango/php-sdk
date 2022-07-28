@@ -16,27 +16,28 @@ final class ResultPager implements ResultPagerInterface
      *
      * @var int
      */
-    private const PER_PAGE = 15;
+    protected const PER_PAGE = 15;
 
     /**
      * The client to use for pagination.
      *
      * @var \Checkmango\Client
      */
+    protected $client;
 
     /**
      * The number of entries to request per page.
      *
      * @var int
      */
-    private $perPage;
+    protected $perPage;
 
     /**
      * The pagination result from the API.
      *
      * @var array<string,string>
      */
-    private $pagination;
+    protected $pagination;
 
     /**
      * Create a new result pager instance.
@@ -103,7 +104,7 @@ final class ResultPager implements ResultPagerInterface
      */
     public function hasNext(): bool
     {
-        return isset($this->pagination['next']);
+        return (int) $this->pagination['current_page'] < $this->pagination['to'];
     }
 
     /**
@@ -119,7 +120,7 @@ final class ResultPager implements ResultPagerInterface
      */
     public function hasPrevious(): bool
     {
-        return isset($this->pagination['prev']);
+        return $this->pagination['current_page'] > 0;
     }
 
     /**
