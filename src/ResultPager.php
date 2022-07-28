@@ -58,7 +58,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetch(AbstractApi $api, string $method, array $parameters = []): array
     {
@@ -74,7 +74,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchAll(AbstractApi $api, string $method, array $parameters = []): array
     {
@@ -82,7 +82,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchAllLazy(AbstractApi $api, string $method, array $parameters = []): Generator
     {
@@ -100,7 +100,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function hasNext(): bool
     {
@@ -108,7 +108,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchNext(): array
     {
@@ -116,7 +116,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function hasPrevious(): bool
     {
@@ -124,7 +124,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchPrevious(): array
     {
@@ -132,7 +132,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchFirst(): array
     {
@@ -140,7 +140,7 @@ final class ResultPager implements ResultPagerInterface
     }
 
     /**
-     * @inheritDoc
+     * {@inheritDoc}
      */
     public function fetchLast(): array
     {
