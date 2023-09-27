@@ -42,13 +42,11 @@ final class ResultPager implements ResultPagerInterface
     /**
      * Create a new result pager instance.
      *
-     * @param  Client  $client
-     * @param  int|null  $perPage
      * @return void
      */
     public function __construct(Client $client, int $perPage = null)
     {
-        if (null !== $perPage && ($perPage < 1 || $perPage > 100)) {
+        if ($perPage !== null && ($perPage < 1 || $perPage > 100)) {
             throw new ValueError(\sprintf('%s::__construct(): Argument #2 ($perPage) must be between 1 and 100, or null', self::class));
         }
 
@@ -149,27 +147,22 @@ final class ResultPager implements ResultPagerInterface
 
     /**
      * Refresh the pagination property.
-     *
-     * @return void
      */
     private function postFetch(): void
     {
         $response = $this->client->getLastResponse();
 
-        $this->pagination = null === $response ? [] : ResponseMediator::getPagination($response);
+        $this->pagination = $response === null ? [] : ResponseMediator::getPagination($response);
     }
 
     /**
-     * @param  string  $key
-     * @return array
-     *
      * @throws \Http\Client\Exception
      */
     private function get(string $key): array
     {
         $pagination = $this->pagination[$key] ?? null;
 
-        if (null === $pagination) {
+        if ($pagination === null) {
             return [];
         }
 
@@ -186,11 +179,6 @@ final class ResultPager implements ResultPagerInterface
         return $content;
     }
 
-    /**
-     * @param  \Checkmango\Api\AbstractApi  $api
-     * @param  int  $perPage
-     * @return \Checkmango\Api\AbstractApi
-     */
     private static function bindPerPage(AbstractApi $api, int $perPage): AbstractApi
     {
         $closure = Closure::bind(static function (AbstractApi $api) use ($perPage): AbstractApi {

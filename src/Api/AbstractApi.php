@@ -34,7 +34,7 @@ abstract class AbstractApi
 
     protected function getAsResponse(string $uri, array $params = [], array $headers = []): ResponseInterface
     {
-        if (null !== $this->perPage && ! isset($params['pagelen'])) {
+        if ($this->perPage !== null && ! isset($params['pagelen'])) {
             $params['pagelen'] = $this->perPage;
         }
 
@@ -52,7 +52,7 @@ abstract class AbstractApi
     {
         $body = self::prepareJsonBody($params);
 
-        if (null !== $body) {
+        if ($body !== null) {
             $headers = self::addJsonContentType($headers);
         }
 
@@ -70,7 +70,7 @@ abstract class AbstractApi
     {
         $body = self::prepareJsonBody($params);
 
-        if (null !== $body) {
+        if ($body !== null) {
             $headers = self::addJsonContentType($headers);
         }
 
@@ -88,7 +88,7 @@ abstract class AbstractApi
     {
         $body = self::prepareJsonBody($params);
 
-        if (null !== $body) {
+        if ($body !== null) {
             $headers = self::addJsonContentType($headers);
         }
 
@@ -109,7 +109,7 @@ abstract class AbstractApi
 
     private static function prepareJsonBody(array $params): ?string
     {
-        if (0 === count($params)) {
+        if (count($params) === 0) {
             return null;
         }
 

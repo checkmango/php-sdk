@@ -32,7 +32,7 @@ class ExceptionThrower implements Plugin
 
     private static function createException(int $status, string $message, array $errors = []): ExceptionInterface
     {
-        if (404 === $status) {
+        if ($status === 404) {
             if ($message === 'Not Found') {
                 return new EndpointNotFoundException($message, $status);
             }
@@ -42,19 +42,19 @@ class ExceptionThrower implements Plugin
             }
         }
 
-        if (400 === $status || 422 === $status) {
+        if ($status === 400 || $status === 422) {
             return (new ValidationFailedException($message, $status))->withErrors($errors);
         }
 
-        if (429 === $status) {
+        if ($status === 429) {
             return new ApiLimitExceededException($message, $status);
         }
 
-        if (500 <= $status) {
+        if ($status >= 500) {
             return new ServerException($message, $status);
         }
 
-        if (400 <= $status) {
+        if ($status >= 400) {
             return new ClientException($message, $status);
         }
 

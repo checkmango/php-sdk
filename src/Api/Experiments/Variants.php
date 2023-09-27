@@ -9,7 +9,6 @@ class Variants extends AbstractExperimentsApi
     /**
      * List all variants.
      *
-     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -20,7 +19,6 @@ class Variants extends AbstractExperimentsApi
     }
 
     /**
-     * @param  array  $params
      * @return array
      */
     public function create(array $params = [])
@@ -31,8 +29,6 @@ class Variants extends AbstractExperimentsApi
     }
 
     /**
-     * @param  string  $variant
-     * @param  array  $params
      * @return array
      */
     public function show(string $variant, array $params = [])
@@ -43,8 +39,6 @@ class Variants extends AbstractExperimentsApi
     }
 
     /**
-     * @param  string  $variant
-     * @param  array  $params
      * @return array
      */
     public function update(string $variant, array $params = [])
@@ -55,8 +49,6 @@ class Variants extends AbstractExperimentsApi
     }
 
     /**
-     * @param  string  $variant
-     * @param  array  $params
      * @return array
      */
     public function remove(string $variant, array $params = [])
@@ -68,10 +60,6 @@ class Variants extends AbstractExperimentsApi
 
     /**
      * Log an impression for a variant.
-     *
-     * @param  string  $variant
-     * @param  string  $participant
-     * @param  array  $params
      */
     public function impression(string $variant, string $participant, array $params = [])
     {
@@ -85,7 +73,6 @@ class Variants extends AbstractExperimentsApi
     /**
      * Build the variants URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildVariantsUri(string ...$parts)

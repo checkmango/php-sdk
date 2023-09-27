@@ -16,9 +16,6 @@ class Events extends AbstractApi
 
     /**
      * Create a new events API instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
     {
@@ -30,7 +27,6 @@ class Events extends AbstractApi
     /**
      * List events.
      *
-     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -43,8 +39,6 @@ class Events extends AbstractApi
     /**
      * Show an event.
      *
-     * @param  string  $event
-     * @param  array  $params
      * @return array
      */
     public function show(string $event, array $params = [])
@@ -57,8 +51,6 @@ class Events extends AbstractApi
     /**
      * Create an event.
      *
-     * @param  string  $event
-     * @param  array  $params
      * @return array
      */
     public function create(string $event, array $params = [])
@@ -71,8 +63,6 @@ class Events extends AbstractApi
     /**
      * Delete an event.
      *
-     * @param  string  $event
-     * @param  array  $params
      * @return array
      */
     public function remove(string $event, array $params = [])
@@ -85,8 +75,6 @@ class Events extends AbstractApi
     /**
      * Update an event.
      *
-     * @param  string  $event
-     * @param  array  $params
      * @return array
      */
     public function update(string $event, array $params = [])
@@ -99,7 +87,6 @@ class Events extends AbstractApi
     /**
      * Build the events URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildEventsUri(string ...$parts)

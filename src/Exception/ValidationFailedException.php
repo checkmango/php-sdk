@@ -9,7 +9,6 @@ class ValidationFailedException extends ErrorException
     /**
      * Add an array of errors to the exception.
      *
-     * @param  array  $errors
      * @return $this
      */
     public function withErrors(array $errors = [])

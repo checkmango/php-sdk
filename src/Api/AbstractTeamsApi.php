@@ -15,9 +15,6 @@ abstract class AbstractTeamsApi extends AbstractApi
 
     /**
      * Create a new abstract teams api instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
     {

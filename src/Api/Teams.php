@@ -9,7 +9,6 @@ class Teams extends AbstractTeamsApi
     /**
      * List all teams that the authenticated user is part of.
      *
-     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -22,8 +21,6 @@ class Teams extends AbstractTeamsApi
     /**
      * Show a team.
      *
-     * @param  int  $teamId
-     * @param  array  $params
      * @return array
      */
     public function show(int $teamId, array $params = [])
@@ -33,33 +30,21 @@ class Teams extends AbstractTeamsApi
         return $this->get($uri, $params);
     }
 
-    /**
-     * @return \Checkmango\Api\Experiments
-     */
     public function experiments(): Experiments
     {
         return new Experiments($this->getClient(), $this->teamId);
     }
 
-    /**
-     * @return \Checkmango\Api\Events
-     */
     public function events(): Events
     {
         return new Events($this->getClient(), $this->teamId);
     }
 
-    /**
-     * @return \Checkmango\Api\Hits
-     */
     public function hits(): Hits
     {
         return new Hits($this->getClient(), $this->teamId);
     }
 
-    /**
-     * @return \Checkmango\Api\Participants
-     */
     public function participants(): Participants
     {
         return new Participants($this->getClient(), $this->teamId);
@@ -68,7 +53,6 @@ class Teams extends AbstractTeamsApi
     /**
      * Build the teams URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildTeamsUri(string ...$parts)

@@ -17,9 +17,6 @@ class Experiments extends AbstractApi
 
     /**
      * Create a new experiments API instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
     {
@@ -31,7 +28,6 @@ class Experiments extends AbstractApi
     /**
      * List experiments.
      *
-     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -44,8 +40,6 @@ class Experiments extends AbstractApi
     /**
      * Show an experiment.
      *
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function show(string $experiment, array $params = [])
@@ -58,8 +52,6 @@ class Experiments extends AbstractApi
     /**
      * Create an experiment.
      *
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function create(string $experiment, array $params = [])
@@ -72,8 +64,6 @@ class Experiments extends AbstractApi
     /**
      * Delete an experiment.
      *
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function remove(string $experiment, array $params = [])
@@ -86,8 +76,6 @@ class Experiments extends AbstractApi
     /**
      * Update an experiment.
      *
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function update(string $experiment, array $params = [])
@@ -100,9 +88,6 @@ class Experiments extends AbstractApi
     /**
      * Enrol a participant into an experiment.
      *
-     * @param  string  $experiment
-     * @param  string  $participant
-     * @param  array  $params
      * @return array
      */
     public function enrol(string $experiment, string $participant, array $params = [])
@@ -115,9 +100,6 @@ class Experiments extends AbstractApi
     /**
      * Alias for "enrol" method.
      *
-     * @param  string  $experiment
-     * @param  string  $participant
-     * @param  array  $params
      * @return array
      */
     public function enroll(string $experiment, string $participant, array $params = [])
@@ -127,9 +109,6 @@ class Experiments extends AbstractApi
 
     /**
      * Get the variants API.
-     *
-     * @param  string  $experiment
-     * @return \Checkmango\Api\Experiments\Variants
      */
     public function variants(string $experiment): Variants
     {
@@ -143,7 +122,6 @@ class Experiments extends AbstractApi
     /**
      * Build the experiments URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildExperimentsUri(string ...$parts)

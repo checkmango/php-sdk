@@ -10,10 +10,6 @@ interface ResultPagerInterface
     /**
      * Fetch a single result from an api call.
      *
-     * @param  AbstractApi  $api
-     * @param  string  $method
-     * @param  array  $parameters
-     * @return array
      *
      * @throws \Http\Client\Exception
      */
@@ -22,10 +18,6 @@ interface ResultPagerInterface
     /**
      * Fetch all results from an api call.
      *
-     * @param  AbstractApi  $api
-     * @param  string  $method
-     * @param  array  $parameters
-     * @return array
      *
      * @throws \Http\Client\Exception
      */
@@ -34,10 +26,6 @@ interface ResultPagerInterface
     /**
      * Lazily fetch all results from an api call.
      *
-     * @param  AbstractApi  $api
-     * @param  string  $method
-     * @param  array  $parameters
-     * @return \Generator
      *
      * @throws \Http\Client\Exception
      */
@@ -45,15 +33,12 @@ interface ResultPagerInterface
 
     /**
      * Check to determine the availability of a next page.
-     *
-     * @return bool
      */
     public function hasNext(): bool;
 
     /**
      * Fetch the next page.
      *
-     * @return array
      *
      * @throws \Http\Client\Exception
      */
@@ -61,15 +46,12 @@ interface ResultPagerInterface
 
     /**
      * Check to determine the availability of a previous page.
-     *
-     * @return bool
      */
     public function hasPrevious(): bool;
 
     /**
      * Fetch the previous page.
      *
-     * @return array
      *
      * @throws \Http\Client\Exception
      */
@@ -78,7 +60,6 @@ interface ResultPagerInterface
     /**
      * Fetch the first page.
      *
-     * @return array
      *
      * @throws \Http\Client\Exception
      */
@@ -87,7 +68,6 @@ interface ResultPagerInterface
     /**
      * Fetch the last page.
      *
-     * @return array
      *
      * @throws \Http\Client\Exception
      */

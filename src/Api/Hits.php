@@ -16,9 +16,6 @@ class Hits extends AbstractApi
 
     /**
      * Create a new experiments API instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
     {
@@ -30,8 +27,6 @@ class Hits extends AbstractApi
     /**
      * Log an impression for an experiment.
      *
-     * @param  string  $experiment
-     * @param  string  $participant
      * @return array
      */
     public function impression(string $experiment, string $participant)
@@ -47,13 +42,9 @@ class Hits extends AbstractApi
     /**
      * Log a conversion for an experiment.
      *
-     * @param  string  $experiment
-     * @param  string  $participant
-     * @param  string|null  $event
-     * @param  array  $attributes
      * @return array
      */
-    public function conversion(string $experiment, string $participant, ?string $event = null, array $attributes = [])
+    public function conversion(string $experiment, string $participant, string $event = null, array $attributes = [])
     {
         $uri = $this->buildHitsUri();
 
@@ -68,7 +59,6 @@ class Hits extends AbstractApi
     /**
      * Build the hits URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildHitsUri(string ...$parts)

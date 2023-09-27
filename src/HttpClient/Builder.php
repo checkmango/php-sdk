@@ -38,9 +38,9 @@ final class Builder
 
     public function getHttpClient(): HttpMethodsClientInterface
     {
-        if (null === $this->pluginClient) {
+        if ($this->pluginClient === null) {
             $plugins = $this->plugins;
-            if (null !== $this->cachePlugin) {
+            if ($this->cachePlugin !== null) {
                 $plugins[] = $this->cachePlugin;
             }
 

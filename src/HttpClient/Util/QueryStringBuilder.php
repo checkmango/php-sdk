@@ -6,13 +6,10 @@ final class QueryStringBuilder
 {
     /**
      * Encode a query as a string according to RFC 3986.
-     *
-     * @param  array  $query
-     * @return string
      */
     public static function build(array $query): string
     {
-        if (0 === count($query)) {
+        if (count($query) === 0) {
             return '';
         }
 

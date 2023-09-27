@@ -27,24 +27,23 @@ final class ResponseMediator
      *
      * If the there is no response body, we will always return the empty array.
      *
-     * @param  \Psr\Http\Message\ResponseInterface  $response
      * @return array
      *
      * @throws \Checkmango\Exception\RuntimeException
      */
     public static function getContent(ResponseInterface $response, $key = 'data')
     {
-        if (204 === $response->getStatusCode()) {
+        if ($response->getStatusCode() === 204) {
             return [];
         }
 
         $body = (string) $response->getBody();
 
-        if ('' === $body) {
+        if ($body === '') {
             return [];
         }
 
-        if (0 !== strpos($response->getHeaderLine(self::CONTENT_TYPE_HEADER), self::JSON_CONTENT_TYPE)) {
+        if (strpos($response->getHeaderLine(self::CONTENT_TYPE_HEADER), self::JSON_CONTENT_TYPE) !== 0) {
             throw new RuntimeException(sprintf('The content type was not %s.', self::JSON_CONTENT_TYPE));
         }
 
@@ -56,7 +55,6 @@ final class ResponseMediator
     /**
      * Get the pagination data from the response.
      *
-     * @param  \Psr\Http\Message\ResponseInterface  $response
      * @return array<string,string>
      */
     public static function getPagination(ResponseInterface $response): array
@@ -80,9 +78,6 @@ final class ResponseMediator
 
     /**
      * Get the error message from the response if present.
-     *
-     * @param  \Psr\Http\Message\ResponseInterface  $response
-     * @return string|null
      */
     public static function getErrorMessage(ResponseInterface $response): ?string
     {
@@ -98,9 +93,6 @@ final class ResponseMediator
 
     /**
      * Get the error message from the error array if present.
-     *
-     * @param  array  $error
-     * @return string|null
      */
     private static function getMessageFromError(array $error): ?string
     {
@@ -113,11 +105,11 @@ final class ResponseMediator
 
         $detail = self::getDetailAsString($error);
 
-        if ('' !== $message) {
-            return '' !== $detail ? sprintf('%s: %s', $message, $detail) : $message;
+        if ($message !== '') {
+            return $detail !== '' ? sprintf('%s: %s', $message, $detail) : $message;
         }
 
-        if ('' !== $detail) {
+        if ($detail !== '') {
             return $detail;
         }
 
@@ -126,16 +118,13 @@ final class ResponseMediator
 
     /**
      * Present the detail portion of the error array.
-     *
-     * @param  array  $error
-     * @return string
      */
     private static function getDetailAsString(array $error): string
     {
         /** @var string|array $detail */
         $detail = $error['detail'] ?? '';
 
-        if ('' === $detail || [] === $detail) {
+        if ($detail === '' || $detail === []) {
             return '';
         }
 

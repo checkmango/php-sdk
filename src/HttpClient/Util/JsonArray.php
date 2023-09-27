@@ -9,8 +9,6 @@ final class JsonArray
     /**
      * Decode a JSON string into a PHP array.
      *
-     * @param  string  $json
-     * @return array
      *
      * @throws \Checkmango\Exception\RuntimeException
      */
@@ -19,11 +17,11 @@ final class JsonArray
         /** @var scalar|array|null $data */
         $data = json_decode($json, true);
 
-        if (JSON_ERROR_NONE !== json_last_error()) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             throw new RuntimeException(sprintf('json_decode error: %s', json_last_error_msg()));
         }
 
-        if (null === $data || ! is_array($data)) {
+        if ($data === null || ! is_array($data)) {
             throw new RuntimeException(sprintf('json_decode error: Expected JSON of type array, %s given.', get_debug_type($data)));
         }
 
@@ -33,8 +31,6 @@ final class JsonArray
     /**
      * Encode a PHP array into a JSON string.
      *
-     * @param  array  $value
-     * @return string
      *
      * @throws \Checkmango\Exception\RuntimeException
      */
@@ -42,7 +38,7 @@ final class JsonArray
     {
         $json = json_encode($value);
 
-        if (JSON_ERROR_NONE !== json_last_error()) {
+        if (json_last_error() !== JSON_ERROR_NONE) {
             throw new RuntimeException(sprintf('json_encode error: %s', json_last_error_msg()));
         }
 

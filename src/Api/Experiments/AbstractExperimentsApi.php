@@ -23,10 +23,6 @@ abstract class AbstractExperimentsApi extends AbstractApi
 
     /**
      * Create a new API instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
-     * @param  string  $experiment
      */
     public function __construct(Client $client, int $teamId, string $experiment)
     {

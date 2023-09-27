@@ -9,7 +9,6 @@ class Experiments extends AbstractParticipantsApi
     /**
      * List all experiments the participant is part of.
      *
-     * @param  array  $params
      * @return array
      */
     public function list(array $params = [])
@@ -20,7 +19,6 @@ class Experiments extends AbstractParticipantsApi
     }
 
     /**
-     * @param  array  $params
      * @return array
      */
     public function create(array $params = [])
@@ -31,8 +29,6 @@ class Experiments extends AbstractParticipantsApi
     }
 
     /**
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function show(string $experiment, array $params = [])
@@ -45,8 +41,6 @@ class Experiments extends AbstractParticipantsApi
     /**
      * Remove the participant from an experiment.
      *
-     * @param  string  $experiment
-     * @param  array  $params
      * @return array
      */
     public function remove(string $experiment, array $params = [])
@@ -59,7 +53,6 @@ class Experiments extends AbstractParticipantsApi
     /**
      * Build the experiments URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildExperimentsUri(string ...$parts)
