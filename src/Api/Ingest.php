@@ -16,9 +16,6 @@ class Ingest extends AbstractApi
 
     /**
      * Create a new Ingest API instance.
-     *
-     * @param  \Checkmango\Client  $client
-     * @param  int  $teamId
      */
     public function __construct(Client $client, int $teamId)
     {
@@ -45,7 +42,6 @@ class Ingest extends AbstractApi
     /**
      * Build the ingest URI from the given parts.
      *
-     * @param  string  ...$parts
      * @return string
      */
     protected function buildIngestUri(string ...$parts)
