@@ -3,8 +3,7 @@
     "description": "The PHP SDK for Checkmango",
     "keywords": [
         "checkmango",
-        "multivariate",
-        "ab"
+        "ab testing"
     ],
     "homepage": "https://github.com/checkmango/php-sdk",
     "license": "MIT",
@@ -53,7 +52,10 @@
         "test": "vendor/bin/phpunit"
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "php-http/discovery": true
+        }
     },
     "minimum-stability": "dev",
     "prefer-stable": true
