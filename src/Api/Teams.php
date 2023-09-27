@@ -40,9 +40,12 @@ class Teams extends AbstractTeamsApi
         return new Events($this->getClient(), $this->teamId);
     }
 
-    public function hits(): Hits
+    /**
+     * @return \Checkmango\Api\ingest
+     */
+    public function ingest(): Ingest
     {
-        return new Hits($this->getClient(), $this->teamId);
+        return new Ingest($this->getClient(), $this->teamId);
     }
 
     public function participants(): Participants
