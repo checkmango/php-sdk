@@ -4,7 +4,7 @@ This project is heavily inspired by [Graham Campbell's](https://github.com/Graha
 
 ## Installation
 
-This version supports PHP 7.2-8.0. To get started, require the project using [Composer](https://getcomposer.org). You will also need to install packages that provide [`psr/http-client-implementation`](https://packagist.org/providers/psr/http-client-implementation) and [`psr/http-factory-implementation`](https://packagist.org/providers/psr/http-factory-implementation).
+This version supports PHP 7.2-8.2. To get started, require the project using [Composer](https://getcomposer.org). You will also need to install packages that provide [`psr/http-client-implementation`](https://packagist.org/providers/psr/http-client-implementation) and [`psr/http-factory-implementation`](https://packagist.org/providers/psr/http-factory-implementation).
 
 ### Standard Installation
 
@@ -26,7 +26,10 @@ $client = new Checkmango\Client();
 $client->authenticate('your_api_token');
 
 // Example API Call
-$experiment = $client->teams($teamId)->experiments()->show('MY_EXPERIMENT_KEY');
+$experiment = $client->teams($teamId)->experiments()->show('EXPERIMENT_KEY');
+
+$client->teams($teamId)->ingest()->store('EXPERIMENT_KEY', 'PARTICIPANT_KEY', 'VARIANT_KEY'); // Track impression
+$client->teams($teamId)->ingest()->store('EXPERIMENT_KEY', 'PARTICIPANT_KEY', 'VARIANT_KEY', 'EVENT_KEY'); // Track conversion
 ```
 
 ### Example with Pager
@@ -40,7 +43,7 @@ $experiments = $pager->fetchAll($client->teams($teamId)->experiments(), 'all');
 
 ## Security
 
-If you discover a security vulnerability within this package, please send an email to James Brooks at james@checkmango.com. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/checkmango/php-sdk/security/policy).
+If you discover a security vulnerability within this package, please email James Brooks at james@checkmango.com. All security vulnerabilities will be promptly addressed. You may view our full security policy [here](https://github.com/checkmango/php-sdk/security/policy).
 
 ## License
 
